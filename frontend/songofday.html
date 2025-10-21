@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyMP3 - Song of the Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SpotifyMP3</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="songofday.html" class="active">Song of Day</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+ <main>
+    <!-- Song of the Day Section -->
+    <section class="song-of-day">
+        <div class="container">
+            <h1>Song of the Day</h1>
+            <div class="featured-song">
+                <div class="song-card large">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273af52c228c9619ff6298b08cd" alt="Featured Song" class="song-thumb">
+                    <div class="song-info">
+                        <h2 class="song-title">Blinding Lights</h2>
+                        <p class="song-artist">The Weeknd</p>
+                        <span class="song-platform platform-spotify">Spotify</span>
+                        <p class="song-description">
+                            "Blinding Lights" is a synth-pop, dance-pop, and electropop song with strong influences from 1980s synth-pop and electronic music. 
+                            It features a prominent synthesizer melody and a driving beat that makes it perfect for both radio play and dance floors.
+                        </p>
+                        <div class="song-actions">
+                            <button class="action-btn play-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                                <i class="fas fa-play"></i> Play
+                            </button>
+                            <button class="action-btn save-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                                <i class="fas fa-heart"></i> Save
+                            </button>
+                            <button class="action-btn add-playlist-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                                <i class="fas fa-plus"></i> Add to Playlist
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous Songs of the Day -->
+    <section class="container">
+        <h2>Previous Songs of the Day</h2>
+        <div class="songs-grid">
+            <!-- Previous Song 1 -->
+            <div class="song-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431" alt="Previous Song" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">Save Your Tears</h3>
+                    <p class="song-artist">The Weeknd</p>
+                    <span class="song-platform platform-spotify">Spotify</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="5QO79kh1waicV47BqGRL3g" data-platform="spotify">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="5QO79kh1waicV47BqGRL3g" data-platform="spotify">
+                            <i class="fas fa-heart"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Previous Song 2 -->
+            <div class="song-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f" alt="Previous Song" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">Levitating</h3>
+                    <p class="song-artist">Dua Lipa</p>
+                    <span class="song-platform platform-spotify">Spotify</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="39LLxExYz6ewLAcYrzQQyP" data-platform="spotify">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="39LLxExYz6ewLAcYrzQQyP" data-platform="spotify">
+                            <i class="fas fa-heart"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Previous Song 3 -->
+            <div class="song-card">
+                <img src="https://i.ytimg.com/vi/JGwWNGJdvx8/maxresdefault.jpg" alt="Previous Song" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">Shape of You</h3>
+                    <p class="song-artist">Ed Sheeran</p>
+                    <span class="song-platform platform-youtube">YouTube</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="JGwWNGJdvx8" data-platform="youtube">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="JGwWNGJdvx8" data-platform="youtube">
+                            <i class="fas fa-heart"></i> Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SpotifyMP3</h3>
+                    <p>Discover and save your favorite music from Spotify and YouTube.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="playlists.html">Playlists</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@spotifymp3.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpotifyMP3. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+ 
+
+    <script src="../assets/js/player.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

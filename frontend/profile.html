@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyMP3 - User Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SpotifyMP3</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="songofday.html">Song of Day</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+ <main>
+    <!-- Profile Section -->
+    <section class="container profile-container">
+        <h1>User Profile</h1>
+        
+        <div class="profile-grid">
+            <div class="profile-sidebar">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h2 id="profile-username">Username</h2>
+                    <p id="profile-email">user@example.com</p>
+                    <p id="profile-joined">Joined: January 1, 2023</p>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="saved-songs-count">0</span>
+                        <span class="stat-label">Saved Songs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="playlists-count">0</span>
+                        <span class="stat-label">Playlists</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="reviews-count">0</span>
+                        <span class="stat-label">Reviews</span>
+                    </div>
+                </div>
+                
+                <div class="profile-actions">
+                    <button class="btn btn-secondary" id="edit-profile-btn">Edit Profile</button>
+                    <button class="btn btn-danger" id="delete-account-btn">Delete Account</button>
+                </div>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="saved">Saved Songs</button>
+                    <button class="tab-btn" data-tab="playlists">My Playlists</button>
+                    <button class="tab-btn" data-tab="reviews">My Reviews</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- Saved Songs Tab -->
+                    <div class="tab-pane active" id="saved-tab">
+                        <h3>Saved Songs</h3>
+                        <div class="songs-grid" id="saved-songs-container">
+                            <!-- Will be populated by JavaScript -->
+                            <p class="no-content-message">You haven't saved any songs yet.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Playlists Tab -->
+                    <div class="tab-pane" id="playlists-tab">
+                        <h3>My Playlists</h3>
+                        <div class="playlists-grid" id="user-playlists-container">
+                            <!-- Will be populated by JavaScript -->
+                            <p class="no-content-message">You haven't created any playlists yet.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews Tab -->
+                    <div class="tab-pane" id="reviews-tab">
+                        <h3>My Reviews</h3>
+                        <div class="reviews-container" id="user-reviews-container">
+                            <!-- Will be populated by JavaScript -->
+                            <p class="no-content-message">You haven't written any reviews yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="edit-profile-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="edit-username">Username</label>
+                    <input type="text" id="edit-username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="edit-password">New Password (leave blank to keep current)</label>
+                    <input type="password" id="edit-password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="edit-confirm-password">Confirm New Password</label>
+                    <input type="password" id="edit-confirm-password" name="confirm-password">
+                </div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+ </main>
+     <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SpotifyMP3</h3>
+                    <p>Discover and save your favorite music from Spotify and YouTube.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="playlists.html">Playlists</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@spotifymp3.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpotifyMP3. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding tab pane
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Modal functionality
+        const modal = document.getElementById('edit-profile-modal');
+        const editBtn = document.getElementById('edit-profile-btn');
+        const closeBtn = document.querySelector('.close-modal');
+        
+        editBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Load user data
+        window.addEventListener('DOMContentLoaded', () => {
+            // Redirect to login if not authenticated
+            fetch('../backend/profile.php?check_auth=1')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.authenticated) {
+                        window.location.href = 'login.html';
+                    } else {
+                        loadUserData();
+                    }
+                })
+                .catch(error => {
+                    console.error('Authentication check failed:', error);
+                    window.location.href = 'login.html';
+                });
+        });
+        
+        function loadUserData() {
+            // Load user profile, saved songs, playlists, and reviews
+            // This would be implemented to fetch data from the backend
+        }
+    </script>
+</body>
+</html>

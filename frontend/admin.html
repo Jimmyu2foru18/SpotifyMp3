@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyMP3 - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SpotifyMP3</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="songofday.html">Song of Day</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+ <main>
+    <!-- Admin Panel Section -->
+    <section class="container admin-container">
+        <h1>Admin Panel</h1>
+        
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="users">Users</button>
+            <button class="tab-btn" data-tab="messages">Messages</button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+            <button class="tab-btn" data-tab="analytics">Analytics</button>
+        </div>
+        
+        <div class="tab-content">
+            <!-- Users Tab -->
+            <div class="tab-pane active" id="users-tab">
+                <h2>Manage Users</h2>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Registered</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Messages Tab -->
+            <div class="tab-pane" id="messages-tab">
+                <h2>User Messages</h2>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>From</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="messages-table-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Reviews Tab -->
+            <div class="tab-pane" id="reviews-tab">
+                <h2>Manage Reviews</h2>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Song</th>
+                                <th>Rating</th>
+                                <th>Review</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reviews-table-body">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Analytics Tab -->
+            <div class="tab-pane" id="analytics-tab">
+                <h2>Site Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h3>User Statistics</h3>
+                        <div class="analytics-chart" id="users-chart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                        <div class="analytics-summary">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Users:</span>
+                                <span class="stat-value" id="total-users">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">New This Month:</span>
+                                <span class="stat-value" id="new-users">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Search Statistics</h3>
+                        <div class="analytics-chart" id="search-chart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                        <div class="analytics-summary">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Searches:</span>
+                                <span class="stat-value" id="total-searches">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Popular Terms:</span>
+                                <span class="stat-value" id="popular-terms">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <h3>Platform Usage</h3>
+                        <div class="analytics-chart" id="platform-chart">
+                            <!-- Chart will be rendered here -->
+                        </div>
+                        <div class="analytics-summary">
+                            <div class="stat-item">
+                                <span class="stat-label">Spotify:</span>
+                                <span class="stat-value" id="spotify-usage">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">YouTube:</span>
+                                <span class="stat-value" id="youtube-usage">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SpotifyMP3</h3>
+                    <p>Discover and save your favorite music from Spotify and YouTube.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="playlists.html">Playlists</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@spotifymp3.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpotifyMP3. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding tab pane
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Load admin data from backend
+        window.addEventListener('DOMContentLoaded', () => {
+            // Redirect to login if not authenticated
+            fetch('../backend/admin.php?check_auth=1')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.authenticated || !data.is_admin) {
+                        window.location.href = 'login.html';
+                    } else {
+                        loadAdminData();
+                    }
+                })
+                .catch(error => {
+                    console.error('Authentication check failed:', error);
+                    window.location.href = 'login.html';
+                });
+        });
+        
+        function loadAdminData() {
+            // Load users, messages, reviews, and analytics data
+            // This would be implemented to fetch data from the backend
+        }
+    </script>
+</body>
+</html>

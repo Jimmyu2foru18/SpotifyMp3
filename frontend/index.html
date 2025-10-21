@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotifyMP3 - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">SpotifyMP3</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="songofday.html">Song of Day</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover and Save Your Favorite Music</h1>
+                <p>Search, listen, and create playlists from both Spotify and YouTube</p>
+                <a href="search.html" class="btn btn-primary">Start Searching</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotify Songs Section -->
+    <section class="container">
+        <h2>Trending on Spotify</h2>
+        <div class="songs-grid">
+            <!-- Song Card 1 -->
+            <div class="song-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273af52c228c9619ff6298b08cd" alt="Song Title" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">Blinding Lights</h3>
+                    <p class="song-artist">The Weeknd</p>
+                    <span class="song-platform platform-spotify">Spotify</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn add-to-playlist-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="action-btn review-btn" data-song-id="0VjIjW4GlUZAMYd2vXMi3b" data-platform="spotify">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Song Card 2 -->
+            <div class="song-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431" alt="Song Title" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">Levitating</h3>
+                    <p class="song-artist">Dua Lipa</p>
+                    <span class="song-platform platform-spotify">Spotify</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="39LLxExYz6ewLAcYrzQQyP" data-platform="spotify">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="39LLxExYz6ewLAcYrzQQyP" data-platform="spotify">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn add-to-playlist-btn" data-song-id="39LLxExYz6ewLAcYrzQQyP" data-platform="spotify">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="action-btn review-btn" data-song-id="39LLxExYz6ewLAcYrzQQyP" data-platform="spotify">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Spotify song cards (10 more) would go here -->
+        </div>
+    </section>
+
+    <!-- YouTube Songs Section -->
+    <section class="container">
+        <h2>Popular on YouTube</h2>
+        <div class="songs-grid">
+            <!-- Song Card 1 -->
+            <div class="song-card">
+                <img src="https://i.ytimg.com/vi/kTJczUoc26U/maxresdefault.jpg" alt="Song Title" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">The Hills</h3>
+                    <p class="song-artist">The Weeknd</p>
+                    <span class="song-platform platform-youtube">YouTube</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="kTJczUoc26U" data-platform="youtube">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="kTJczUoc26U" data-platform="youtube">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn add-to-playlist-btn" data-song-id="kTJczUoc26U" data-platform="youtube">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="action-btn review-btn" data-song-id="kTJczUoc26U" data-platform="youtube">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Song Card 2 -->
+            <div class="song-card">
+                <img src="https://i.ytimg.com/vi/JGwWNGJdvx8/maxresdefault.jpg" alt="Song Title" class="song-thumb">
+                <div class="song-info">
+                    <h3 class="song-title">Shape of You</h3>
+                    <p class="song-artist">Ed Sheeran</p>
+                    <span class="song-platform platform-youtube">YouTube</span>
+                    <div class="song-actions">
+                        <button class="action-btn play-btn" data-song-id="JGwWNGJdvx8" data-platform="youtube">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="action-btn save-btn" data-song-id="JGwWNGJdvx8" data-platform="youtube">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn add-to-playlist-btn" data-song-id="JGwWNGJdvx8" data-platform="youtube">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="action-btn review-btn" data-song-id="JGwWNGJdvx8" data-platform="youtube">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More YouTube song cards (10 more) would go here -->
+        </div>
+    </section>
+
+    <!-- Music Player -->
+    <div id="player-container" class="player-container">
+        <div id="music-player" class="music-player"></div>
+        <div id="player-controls" class="player-controls">
+            <div id="now-playing" class="now-playing"></div>
+            <div class="controls">
+                <button id="play-pause-btn" class="control-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="progress">
+                    <div id="progress-bar" class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <div id="time-display" class="time-display">0:00 / 0:00</div>
+                </div>
+                <div class="volume">
+                    <i class="fas fa-volume-up"></i>
+                    <input type="range" id="volume-control" min="0" max="100" value="80">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SpotifyMP3</h3>
+                    <p>Discover and save your favorite music from Spotify and YouTube.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Search</a></li>
+                        <li><a href="playlists.html">Playlists</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@spotifymp3.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SpotifyMP3. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/player.js"></script>
+</body>
+</html>
